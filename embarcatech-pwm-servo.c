@@ -22,7 +22,7 @@ void setup_pwm() {
 }
 
 void move_servo_smooth(uint16_t start, uint16_t end) {
-    uint16_t step = (end - start) ? 5 : -5;
+    int step = (start < end) ? 5 : -5;
     uint16_t slice_num = pwm_gpio_to_slice_num(SERVO_PIN);
 
     for (int us = start; (step > 0) ? us <= end : us >= end; us += step) {
@@ -35,22 +35,20 @@ int main() {
     stdio_init_all();
     setup_pwm();
 
-    uint16_t slice_num = pwm_gpio_to_slice_num(SERVO_PIN);
-
     while (true) {
         // 180 graus (2400µs)
         printf("Movendo para 180 graus\n");
-        pwm_set_chan_level(slice_num, PWM_CHAN_A, us_to_count(2400));
+        pwm_set_chan_level(pwm_gpio_to_slice_num(SERVO_PIN), PWM_CHAN_A, us_to_count(2400));
         sleep_ms(5000);
 
         // 90 graus (1470µs)
         printf("Movendo para 90 graus\n");
-        pwm_set_chan_level(slice_num, PWM_CHAN_A, us_to_count(1470));
+        pwm_set_chan_level(pwm_gpio_to_slice_num(SERVO_PIN), PWM_CHAN_A, us_to_count(1470));
         sleep_ms(5000);
 
         // 0 graus (500µs)
         printf("Movendo para 0 graus\n");
-        pwm_set_chan_level(slice_num, PWM_CHAN_A, us_to_count(500));
+        pwm_set_chan_level(pwm_gpio_to_slice_num(SERVO_PIN), PWM_CHAN_A, us_to_count(500));
         sleep_ms(5000);
 
         // movimento suave
