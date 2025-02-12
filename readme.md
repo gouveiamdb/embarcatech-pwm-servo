@@ -69,7 +69,7 @@ O vídeo de demonstração exibe:
 - Funcionamento do código.
 - Explicação das funcionalidades implementadas.
 
-📌 **[Link para o vídeo](#)** (https://drive.google.com/file/d/1HE52dFNtYhwgroXTrPvK50rI78rzq9hW/view?usp=sharing)
+📌 **[Link para o vídeo](#)** [https://drive.google.com/file/d/1HE52dFNtYhwgroXTrPvK50rI78rzq9hW/view?usp=sharing]
 
 ---
 
