@@ -60,14 +60,17 @@ int main() {
         // Movimentos fixos
         printf("Movendo para 180 graus\n");
         pwm_set_chan_level(pwm_gpio_to_slice_num(SERVO_PIN), PWM_CHAN_A, us_to_count(2400));
+        pwm_set_chan_level(pwm_gpio_to_slice_num(LED_PIN), PWM_CHAN_A, us_to_count(2400));
         sleep_ms(5000);
 
         printf("Movendo para 90 graus\n");
         pwm_set_chan_level(pwm_gpio_to_slice_num(SERVO_PIN), PWM_CHAN_A, us_to_count(1470));
+        pwm_set_chan_level(pwm_gpio_to_slice_num(LED_PIN), PWM_CHAN_A, us_to_count(1470));
         sleep_ms(5000);
 
         printf("Movendo para 0 graus\n");
         pwm_set_chan_level(pwm_gpio_to_slice_num(SERVO_PIN), PWM_CHAN_A, us_to_count(500));
+        pwm_set_chan_level(pwm_gpio_to_slice_num(LED_PIN), PWM_CHAN_A, us_to_count(500));
         sleep_ms(5000);
 
         // Movimento contínuo
