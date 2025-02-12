@@ -52,7 +52,7 @@ Este projeto implementa o controle de um **servomotor** utilizando **PWM (Pulse 
 ## ⚙️ Instruções de Compilação e Execução
 
 1. **Clone o repositório**:
-   ```sh
+   ```
    git clone https://github.com/gouveiamdb/embarcatech-pwm-servo.git
    ```
 2. **Configure o Pico SDK**.
