@@ -57,12 +57,7 @@ Este projeto implementa o controle de um **servomotor** utilizando **PWM (Pulse 
    cd seu-repositorio
    ```
 2. **Configure o Pico SDK**.
-3. **Compile o código usando CMake**:
-   ```sh
-   mkdir build && cd build
-   cmake ..
-   make
-   ```
+3. **Compile o código**.
 4. **Carregue o firmware no Raspberry Pi Pico W**.
 5. **Conecte ao monitor serial** para visualizar as mensagens de depuração.
 
